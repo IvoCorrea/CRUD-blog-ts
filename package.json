@@ -1,0 +1,22 @@
+{
+  "name": "crud-blog-ts",
+  "version": "1.0.0",
+  "description": "a blog using typescript",
+  "main": "index.ts",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvoCorrea/CRUD-blog-ts.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Ivo Correa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IvoCorrea/CRUD-blog-ts/issues"
+  },
+  "homepage": "https://github.com/IvoCorrea/CRUD-blog-ts#readme"
+}
