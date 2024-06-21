@@ -1,2 +1,15 @@
+# Local Var
 .env
+
+# Node
 /node_modules
+
+# Bootstrap specific
+bootstrap/
+bootstrap/dist/
+bootstrap/node_modules/
+
+# Ignore built files
+*.min.css
+*.min.js
+*.map

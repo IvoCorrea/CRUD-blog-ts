@@ -1,7 +1,9 @@
-import express, { Express, Request, Response } from "express";
+import { categoriesController } from "./controllers/categories/Categories.controller";
+import { articlesController } from "./controllers/articles/articles.controller";
+import express, { Application } from "express";
 import path from "path";
 
-const app: Express = express();
+const app: Application = express();
 const Port: number = 9090;
 
 // Static Folder
@@ -11,9 +13,8 @@ app.use(express.static("public"));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.get("/", (req: Request, res: Response) => {
+// Controllers
+categoriesController(app);
+articlesController(app);
 
-    return res.render("index");
-});
-
-app.listen(Port, () => console.log(`http://localhost:${Port}`))
+app.listen(Port, () => console.log(`http://localhost:${Port}`));
