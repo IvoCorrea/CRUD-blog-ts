@@ -14,3 +14,22 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Categories {
+  id    Int    @id @default(autoincrement())
+  title String @unique
+  slug  String @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Articles {
+  id    Int    @id @default(autoincrement())
+  title String @unique
+  body  String @db.LongText
+  slug  String @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

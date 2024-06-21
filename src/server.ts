@@ -1,5 +1,5 @@
 import { categoriesController } from "./controllers/categories/Categories.controller";
-import { articlesController } from "./controllers/articles/articles.controller";
+import { articlesController } from "./controllers/articles/Articles.controller";
 import express, { Application } from "express";
 import path from "path";
 
