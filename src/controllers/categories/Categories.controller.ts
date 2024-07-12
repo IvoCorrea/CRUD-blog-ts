@@ -6,12 +6,16 @@ const prisma = new PrismaClient();
 
 export function categoriesController(app: Application) {
 
-    app.get(("/categories"), (req: Request, res: Response) => {
+    app.get(("/categories"), async (req: Request, res: Response) => {
 
-        const categoriesData = prisma.categories.findMany();
+        const categoriesData = await prisma.categories.findMany();
 
         res.json(categoriesData);
 
     });
+
+    app.post(("/admin/categories"), async (req: Request, res: Response) => {
+        
+    })
 };
 
